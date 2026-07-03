@@ -255,7 +255,7 @@ ul.pubs li::before {
   border-radius: 50%;
 }
 ul.pubs .authors { color: var(--ink); }
-ul.pubs .me { font-weight: 700; }
+ul.pubs .me { font-weight: 400; }
 ul.pubs .venue { color: var(--muted); font-style: italic; }
 ul.pubs a.dl { font-size: .88rem; font-weight: 600; white-space: nowrap; }
 
