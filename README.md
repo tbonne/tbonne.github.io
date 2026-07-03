@@ -102,8 +102,12 @@ The live site refreshes within a minute or two of each commit. Because it's Git,
 every change is versioned and reversible.
 
 ### A couple of things to check
-- **Email:** `index.html` uses `tyler.bonnell@ucalgary.ca` as a placeholder
-  (the old site hid the real address). Update it if that's not correct.
+- **Home banner:** the Home page shows a full-width landscape banner pulled from
+  `assets/img/hero.jpg`. Drop a wide landscape photo there (that exact filename)
+  and it appears automatically. Until you add one, a soft green panel shows in
+  its place — nothing breaks.
+- **Email:** `index.html` uses `tyler.bonnell@ucalgary.ca` (matches your
+  UCalgary profile). Update it if you'd prefer a different address.
 - **Photos:** member cards currently show initials. Add real headshots to
   `assets/img/` and swap them in as shown above whenever you like.
 

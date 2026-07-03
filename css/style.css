@@ -92,6 +92,31 @@ a:hover { text-decoration: underline; }
 }
 .hero p.lead { font-size: 1.15rem; color: var(--muted); margin: 0; max-width: 60ch; }
 
+/* Full-width landscape banner image.
+   Drop your photo at assets/img/hero.jpg. Until then, a soft green
+   panel shows in its place (nothing breaks). */
+.hero.banner {
+  padding: 0;
+  min-height: 380px;
+  background-color: var(--accent-soft);
+  background-image:
+    linear-gradient(0deg, rgba(20,40,35,.18), rgba(20,40,35,0) 45%),
+    url('../assets/img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 720px) { .hero.banner { min-height: 240px; } }
+
+/* Page-level intro heading + lead (used on Home, below the banner) */
+main h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 10px;
+  letter-spacing: -.02em;
+}
+p.lead { font-size: 1.15rem; color: var(--muted); margin: 0; max-width: 60ch; }
+
 /* ---------- Sections ---------- */
 main { padding: 48px 0 64px; }
 section { margin-bottom: 56px; }
@@ -206,29 +231,33 @@ img.avatar { padding: 0; }
   font-size: .95rem;
 }
 .btn:hover { background: var(--accent-dark); text-decoration: none; }
-ol.pubs { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
-ol.pubs li {
-  counter-increment: pub;
+.pub-year {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin: 28px 0 4px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent-soft);
+}
+.pub-year:first-of-type { margin-top: 8px; }
+ul.pubs { list-style: none; margin: 0 0 8px; padding: 0; }
+ul.pubs li {
   position: relative;
-  padding: 14px 0 14px 44px;
+  padding: 12px 0 12px 20px;
   border-bottom: 1px solid var(--border);
 }
-ol.pubs li::before {
-  content: counter(pub);
+ul.pubs li::before {
+  content: "";
   position: absolute;
-  left: 0; top: 14px;
-  width: 30px; height: 30px;
-  background: var(--accent-soft);
-  color: var(--accent-dark);
-  font-size: .8rem; font-weight: 700;
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
+  left: 2px; top: 21px;
+  width: 7px; height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
 }
-ol.pubs .authors { color: var(--ink); }
-ol.pubs .me { font-weight: 700; }
-ol.pubs .venue { color: var(--muted); font-style: italic; }
-ol.pubs .year { color: var(--accent); font-weight: 600; }
-ol.pubs a.dl { font-size: .88rem; font-weight: 600; white-space: nowrap; }
+ul.pubs .authors { color: var(--ink); }
+ul.pubs .me { font-weight: 700; }
+ul.pubs .venue { color: var(--muted); font-style: italic; }
+ul.pubs a.dl { font-size: .88rem; font-weight: 600; white-space: nowrap; }
 
 /* ---------- Callout ---------- */
 .callout {
@@ -254,5 +283,5 @@ ol.pubs a.dl { font-size: .88rem; font-weight: 600; white-space: nowrap; }
   .intro-grid { grid-template-columns: 1fr; gap: 24px; }
   .intro-grid img { max-width: 280px; }
   .hero { padding: 40px 0; }
-  ol.pubs a.dl { display: inline-block; margin-top: 4px; }
+  ul.pubs a.dl { display: inline-block; margin-top: 4px; }
 }
