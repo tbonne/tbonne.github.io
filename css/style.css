@@ -190,6 +190,7 @@ img.avatar { padding: 0; }
 }
 .person .name { font-weight: 700; font-size: 1.02rem; }
 .person .blurb { color: var(--muted); font-size: .9rem; margin-top: 4px; }
+.person .cosup { color: var(--muted); font-size: .82rem; margin-top: 6px; }
 
 /* ---------- Research ---------- */
 .project {
